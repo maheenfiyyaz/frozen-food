@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frozen Food Items</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="pizza icon" type="png"
+    href="assets/frozan_food_item_logo_with_purplr_and_yellow_color-removebg-preview.png">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#home">
+          <img src="assets/frozan_food_item_logo_with_purplr_and_yellow_color-removebg-preview.png"
+            alt="Frozen Delights Logo">
+        </a>
+      </div>
+      <button class="navbar-toggle">Menu</button>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#product">Products</a></li>
+          <li><a href="#recipe">Recipes</a></li>
+          <li><a href="#deals">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#shop" class="cta-button">Shop Now</a>
+    </div>
+  </header>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="text-content">
+        <h1>Welcome to FrozenDelights</h1>
+        <p>Delicious, Healthy, and Convenient Frozen Meals Delivered to Your Doorstep</p>
+        <a href="#shop" class="cta-button">Shop Now</a>
+      </div>
+      <div class="image-content">
+        <img src="assets/Untitled_design-removebg-preview.png" alt="Frozen Food" />
+        <!-- Replace with your hero image -->
+      </div>
+    </div>
+  </section>
+  <section class="featured-products" id="product">
+    <div class="featured-container">
+      <h2 class="featured-title">Our Products</h2>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <img src="assets/Untitled design (1).png" alt="Classic Margherita" class="product-image">
+          <h3 class="product-name">Frozen Pizza</h3>
+          <p class="product-description">Delicious frozen pizza with a variety of toppings</p>
+          <p class="product-price">$11.99</p>
+          <button class="add-to-cart" onclick="addToCart('Frozen Pizza', 11.99)">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+          <img src="assets/Untitled design (2).png" alt="Pepperoni Delight" class="product-image">
+          <h3 class="product-name">Frozen Fries</h3>
+          <p class="product-description">Crispy frozen fries for quick snacks.</p>
+          <p class="product-price">$5.99</p>
+          <button class="add-to-cart" onclick="addToCart('Frozen Fries', 5.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/Untitled design (3).png" alt="Veggie Supreme" class="product-image">
+          <h3 class="product-name">Frozen Samosa</h3>
+          <p class="product-description">Delicious and tasty frozen samosa.</p>
+          <p class="product-price">$9.99</p>
+          <button class="add-to-cart" onclick="addToCart('Frozen Samosa', 9.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="assets/o.png" alt="Pepperoni Delight" class="product-image">
+          <h3 class="product-name">Frozen Nuggets</h3>
+          <p class="product-description">Crispy frozen nuggets for quick snacks.</p>
+          <p class="product-price">$7.99</p>
+          <button class="add-to-cart" onclick="addToCart('Frozen Nuggets', 7.99)">Add to Cart</button>
+        </div>
+
+      </div>
+  </section>
+
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+  <section class="featured-recipe" id="recipe">
+    <div class="featured-container">
+      <h2 class="featured-title">Recipes Idesa</h2>
+      <div class="products-grid">
+
+        <div class="product-cards">
+          <img src="assets/Untitled design (6).png" alt="Classic Margherita" class="product-image">
+          <h3 class="product-name">Cheesy Pizza Pockets</h3>
+          <p class="product-description">A quick and delicious snack made with frozen dough.</p>
+          <button class="btn-product-btn">Read More</button>
+
+        </div>
+
+        <div class="product-cards">
+          <img src="assets/Untitled design (7).png" alt="Pepperoni Delight" class="product-image">
+          <h3 class="product-name">Loaded Fries</h3>
+          <p class="product-description">Crispy fries topped with cheese and jalapeños.</p>
+          <button class="btn-product-btn">Read More</button>
+        </div>
+
+        <div class="product-cards">
+          <img src="assets/Untitled design (8).png" alt="Veggie Supreme" class="product-image">
+          <h3 class="product-name">Veggie Stir-fry</h3>
+          <p class="product-description">A colorful mix of frozen veggies with soy sauce.</p>
+          <button class="btn-product-btn">Read More</button>
+        </div>
+      </div>
+  </section>
+
+  <section class="deals-section" id="deals">
+    <div class="deals-container">
+      <h2 class="deals-title">Exclusive Promotional Offers</h2>
+      <p class="deals-description">
+        Get a free treat on every purchase of our delicious desserts!
+      </p>
+      <div class="deals-grid">
+
+        <div class="deal-card">
+          <h3 class="deal-title">Buy 1 Get 1 Free</h3>
+          <p class="deal-info">Get a free treat on every purchase of our delicious desserts</p>
+          <button class="btn deal-btn">Shop Now</button>
+        </div>
+
+        <div class="deal-card">
+          <h3 class="deal-title">20% Off on Weekends</h3>
+          <p class="deal-info">Enjoy 20% off on all orders every Saturday and Sunday.</p>
+          <button class="btn deal-btn">Shop Now</button>
+        </div>
+
+        <div class="deal-card">
+          <h3 class="deal-title">Combo Special</h3>
+          <p class="deal-info">2 medium pizzas, 1 drink, and a dessert for just $25!</p>
+          <button class="btn deal-btn">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="assets/frozan_food_item_logo_with_purplr_and_yellow_color-removebg-preview.png"="logo" />
+    </div>
+
+    <div class="footer-text">
+      <p>Savor the best pizzas in town. Freshly baked and delivered to your door.</p>
+    </div>
+
+    <div class="footer-social">
+      <ul>
+
+        <li> <a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+        <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Pizza Hut. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
